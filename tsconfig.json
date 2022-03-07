@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "module": "commonJS",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./dist/",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "strict": true,
+    "declaration": true,
+    "target": "es5",
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*", "./*.json"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

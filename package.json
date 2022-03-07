@@ -1,0 +1,37 @@
+{
+  "name": "communityid-typescript-test",
+  "homepage": "https://github.com/matthew-renodin",
+  "version": "1.0.0",
+  "description": "Create a community ID",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://"
+  },
+  "scripts": {
+    "cid": "npm run communityIdRunner",
+    "sample": "ts-node src/sample",
+    "distro": "tsc -p . && cp src/typings.d.ts dist",
+    "clean": "rimraf dist",
+    "communityIdRunner": "ts-node src/communityIdRunner",
+    "lint": "tslint -c tslint.json src/**/*.{ts,spec.ts}"
+  },
+  "author": "Matthew Renodin",
+  "license": "MIT",
+  "dependencies": {
+    "@types/sha1": "^1.1.3",
+    "typescript": "^3.3.3333"
+  },
+  "prepare": "npm run build",
+  "prepublishOnly": "npm run lint",
+  "preversion": "npm run lint",
+  "postversion": "git push && git push --tags",
+  "devDependencies": {
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.13.0"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}
